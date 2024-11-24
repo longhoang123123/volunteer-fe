@@ -1,0 +1,52 @@
+
+.important-notice-form {
+  padding: 30px; /* Tăng padding để tạo không gian hơn */
+  background-color: #fefefe; /* Sử dụng màu nền sáng hơn */
+  border: 1px solid #e0e0e0; /* Màu sắc nhẹ nhàng cho viền */
+  margin: 20px 0;
+  border-radius: 15px; /* Tăng độ bo góc */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+}
+
+.important-notice-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Màu chính cho tiêu đề */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Phông chữ hiện đại */
+  font-weight: 600; /* Tăng độ đậm cho tiêu đề */
+}
+
+.important-notice-form ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.important-notice-form ul li {
+  margin-bottom: 25px; /* Tăng khoảng cách giữa các mục */
+}
+
+.important-notice-form ul li h3 {
+  color: #333;
+  font-size: 1.4rem; /* Tăng kích thước tiêu đề con */
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff; /* Thêm đường viền dưới tiêu đề */
+  padding-bottom: 5px; /* Thêm khoảng cách dưới tiêu đề */
+}
+
+.important-notice-form ul li p {
+  font-size: 1.1rem; /* Tăng kích thước văn bản */
+  color: #555;
+  line-height: 1.6; /* Tăng khoảng cách dòng */
+  background-color: #fff;
+  padding: 20px; /* Tăng padding để văn bản dễ đọc hơn */
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Tăng độ bo góc */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng nhẹ */
+  transition: transform 0.2s, box-shadow 0.2s; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.important-notice-form ul li p:hover {
+  transform: translateY(-2px); /* Hiệu ứng khi di chuột qua văn bản */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi di chuột */
+}

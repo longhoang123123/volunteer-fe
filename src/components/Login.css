@@ -1,0 +1,137 @@
+/* Tổng quát cho body và html */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Trang đăng nhập */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Màu nền của trang */
+}
+
+/* Container của form đăng nhập */
+.login-container {
+    width: 400px; /* Chiều rộng của form */
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Hiệu ứng hover */
+}
+
+/* Tiêu đề của form */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Nhóm các trường nhập liệu */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Tạo khoảng trống cho icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff; /* Màu viền khi focus */
+    outline: none;
+}
+
+/* Container cho mật khẩu */
+.password-container {
+    position: relative;
+}
+
+/* Icon toggle mật khẩu */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Nút đăng nhập */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Thông báo lỗi */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Liên kết quên mật khẩu và đăng ký */
+.forgot-password, .register {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password a, .register a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover, .register a:hover {
+    text-decoration: underline;
+}
+
+/* Thông báo thành công */
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.success-message.hide {
+    opacity: 0; /* Ẩn thông báo với hiệu ứng */
+}

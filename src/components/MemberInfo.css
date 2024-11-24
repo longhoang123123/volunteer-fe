@@ -1,0 +1,37 @@
+/* MemberInfo.css */
+
+.member-info {
+    background-color: #f1f1f1; /* Màu nền nhạt cho phần dưới */
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px; /* Cách biệt với footer */
+}
+
+.member-info-content {
+    display: flex; /* Sử dụng flexbox để sắp xếp các hình ảnh nằm ngang */
+    justify-content: center; /* Căn giữa các phần tử */
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi không còn chỗ */
+}
+
+.member-item {
+    display: flex; /* Sử dụng flexbox cho mỗi mục */
+    flex-direction: column; /* Đặt tiêu đề ở trên và hình ảnh ở dưới */
+    align-items: center; /* Căn giữa các phần tử bên trong */
+    margin: 0 15px; /* Khoảng cách giữa các mục */
+    text-align: center; /* Căn giữa tiêu đề và hình ảnh */
+}
+
+.member-info h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.member-logo {
+    max-width: 100px; /* Giới hạn chiều rộng của hình ảnh */
+    height: auto; /* Để giữ tỷ lệ của hình ảnh */
+}
+
+.member-info p {
+    margin-top: 20px; /* Tạo khoảng cách với phần nội dung */
+}

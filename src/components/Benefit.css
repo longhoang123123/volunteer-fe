@@ -1,0 +1,46 @@
+/* Benefit.css */
+.benefits-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .benefits-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .benefits-content {
+    display: flex; /* Sử dụng flexbox để chia thành 2 cột */
+    justify-content: space-between; /* Khoảng cách giữa các cột */
+  }
+  
+  .benefits-column {
+    flex: 1; /* Mỗi cột chiếm 50% chiều rộng */
+    margin: 0 10px; /* Khoảng cách giữa các cột */
+  }
+  
+  .benefits-column ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .benefits-column ul li {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .benefits-column ul li:before {
+    content: "• ";
+    color: #007bff;
+    font-weight: bold;
+  }
+  

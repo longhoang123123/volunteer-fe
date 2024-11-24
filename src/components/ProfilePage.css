@@ -1,0 +1,188 @@
+/* src/components/ProfilePage.css */
+.container {
+  padding: 10px;
+ 
+  background-color: #f9f9f9;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.language-selector {
+  font-size: 16px;
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer; /* Thêm con trỏ chuột kiểu pointer khi di chuột vào tên */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 70px; /* Điều chỉnh vị trí của menu xổ xuống */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 220px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu li svg {
+  font-size: 18px;
+}
+
+/* thông báo */
+.notification-icon {
+  font-size: 20px; /* Kích thước của icon */
+  color: #555; /* Màu của icon */
+  margin-right: 15px; /* Khoảng cách giữa icon và ảnh profile */
+  cursor: pointer; /* Con trỏ dạng tay khi hover */
+  transition: color 0.3s ease;
+}
+
+.notification-icon:hover {
+  color: #004aad; /* Màu khi hover */
+}
+
+.notification-box {
+  position: absolute;
+  top: 70px; /* Khoảng cách từ đỉnh (tùy chỉnh theo layout của bạn) */
+  right: 20px; /* Canh phải */
+  width: 300px; /* Chiều rộng của hộp thoại */
+  background-color: white; /* Màu nền */
+  border: 1px solid #ccc; /* Viền hộp */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  z-index: 1000; /* Đảm bảo hộp ở trên cùng */
+  padding: 10px;
+}
+
+.notification-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-box li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee; /* Viền dưới cho mỗi thông báo */
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-box li:last-child {
+  border-bottom: none; /* Bỏ viền cuối cùng */
+}
+
+.notification-box li:hover {
+  background-color: #f9f9f9; /* Màu khi hover */
+  cursor: pointer;
+}
+/* nút đăng nhập */
+.login-button {
+  padding: 10px 20px;
+  background-color: #004aad; /* Blue background color */
+  color: white; /* White text */
+  font-size: 16px;
+  font-weight: bold; /* Make text bold */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scaling */
+  text-decoration: none; /* Remove underline for Link */
+  display: inline-block; /* Make the Link element behave like a button */
+}
+
+.login-button:hover {
+  background-color: #003699; /* Darker blue when hovered */
+  transform: scale(1.05); /* Slightly grow the button when hovered */
+}
+
+.login-button:focus {
+  outline: none; /* Remove focus outline */
+}/* src/components/ProfilePage.css */
+
+/* Style for the login button when the user is not logged in */
+.login-button {
+  padding: 10px 20px;
+  background-color: #004aad; /* Blue background color */
+  color: white; /* White text */
+  font-size: 16px;
+  font-weight: bold; /* Make text bold */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scaling */
+  text-decoration: none; /* Remove underline for Link */
+  display: inline-flex; /* Use flexbox for horizontal layout */
+  align-items: center; /* Vertically center icon and text */
+  gap: 10px; /* Space between icon and text */
+}
+
+.login-button:hover {
+  background-color: #003699; /* Darker blue when hovered */
+  transform: scale(1.05); /* Slightly grow the button when hovered */
+}
+
+.login-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.login-button svg {
+  font-size: 20px; /* Adjust icon size */
+}
+

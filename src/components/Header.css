@@ -1,0 +1,51 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa toàn bộ nội dung trong header */
+  padding: 10px 20px;
+  background-color: #004aad; /* Màu nền cho header */
+  color: white; /* Màu chữ */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* Căn giữa menu */
+  width: 100%; /* Chiều rộng chiếm toàn bộ để menu ở giữa */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các mục menu */
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #f0a500; /* Màu khi hover */
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 5px 10px; /* Thêm padding để dễ dàng nhận diện */
+}
+
+.menu li a:hover {
+  color: #f0a500; /* Màu khi hover */
+}
+
+/* Thêm viền đỏ cho menu item đang active */
+.menu li .active {
+  border-bottom: 2px solid red; /* Viền đỏ dưới menu item khi active */
+  color: #f0a500; /* Màu chữ khi active */
+}

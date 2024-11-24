@@ -1,0 +1,144 @@
+/* Container chính */
+.events-page {
+  padding: 20px;
+  background-color: #f9f9f9; /* Màu nền nhẹ nhàng */
+  font-family: Arial, sans-serif;
+}
+
+/* Bộ lọc tìm kiếm */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center; /* Căn giữa các phần tử bên trong */
+  max-width: 800px; /* Giới hạn chiều rộng của bộ lọc */
+  margin: 0 auto; /* Căn giữa bộ lọc trong trang */
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  width: 200px; 
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    max-width: 100%; 
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%; 
+  }
+}
+
+/* Danh sách sự kiện */
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Căn giữa danh sách sự kiện */
+}
+
+/* Card sự kiện */
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Thông tin sự kiện */
+.event-info {
+  padding: 15px;
+}
+
+.event-info h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Nút đăng ký */
+.register-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.register-btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+
+  .register-btn {
+    width: 100%; 
+    text-align: center;
+  }
+}

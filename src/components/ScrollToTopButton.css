@@ -1,0 +1,34 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 1000; /* Đảm bảo nút luôn nổi trên các thành phần khác */
+}
+
+.scroll-button {
+  font-size: 24px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient màu hiện đại */
+  color: #fff;
+  border: none;
+  border-radius: 10px; /* Góc bo tròn nhẹ */
+  width: 50px; /* Chiều rộng của nút */
+  height: 50px; /* Chiều cao để giữ hình vuông */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Căn giữa biểu tượng */
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng mềm */
+  transition: all 0.3s ease; /* Thêm transition cho tất cả các thay đổi */
+  outline: none; /* Loại bỏ đường viền khi click vào nút */
+}
+
+.scroll-button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb); /* Đổi hướng gradient khi di chuột */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Tăng hiệu ứng bóng khi hover */
+  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi di chuột */
+}
+
+.scroll-button:active {
+  transform: scale(1); /* Giảm kích thước về bình thường khi click */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Bóng nhỏ hơn khi click */
+}

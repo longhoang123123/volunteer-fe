@@ -1,0 +1,39 @@
+/* Nút tiếp theo */
+.next-button {
+    background-color: #007bff; /* Màu nền nút */
+    color: white; /* Màu chữ */
+    padding: 12px 20px; /* Tăng kích thước đệm bên trong */
+    border-radius: 6px; /* Góc tròn */
+    cursor: pointer; /* Con trỏ khi hover */
+    margin-top: 20px; /* Khoảng cách trên */
+    font-size: 16px; /* Kích thước chữ */
+    border: none; /* Bỏ đường viền mặc định */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nút */
+    text-align: center; /* Căn giữa chữ trong nút */
+    width: auto; /* Chiều rộng tự động */
+  }
+  
+  .back-button {
+    background-color: #007bff; /* Màu nền nút */
+    color: white; /* Màu chữ */
+    padding: 12px 20px; /* Tăng kích thước đệm bên trong */
+    border-radius: 6px; /* Góc tròn */
+    cursor: pointer; /* Con trỏ khi hover */
+    margin-top: 20px; /* Khoảng cách trên */
+    font-size: 16px; /* Kích thước chữ */
+    border: none; /* Bỏ đường viền mặc định */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nút */
+    text-align: center; /* Căn giữa chữ trong nút */
+    width: auto; /* Chiều rộng tự động */
+    /* Căn trái cho nút */
+    align-self: flex-start; /* Căn trái trong flexbox */
+  }
+  
+  /* Nếu nút quay về nằm trong một container flex, hãy đảm bảo thêm quy tắc sau vào container */
+  .button-container-step2 {
+    display: flex; /* Sử dụng Flexbox để căn giữa */
+    justify-content: space-between; /* Căn trái và phải */
+    margin-top: 20px; /* Khoảng cách trên cho nút */
+  }

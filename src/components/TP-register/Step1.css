@@ -1,0 +1,100 @@
+/* Step1.css */
+
+/* Container styling */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input and select styling */
+input[type="text"],
+select {
+  width: 100%; /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Small text styling */
+small {
+  display: block;
+  color: #999;
+}
+
+/* Button container styling */
+.button-container-step1 {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 20px;
+}
+
+/* Button styling */
+.back-button,
+.next-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s; /* Add smooth transition for hover effect */
+}
+
+/* Back button styling */
+.back-button {
+  background-color: #6c757d; /* Gray background */
+  color: white;
+}
+
+/* Next button styling */
+.next-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+}
+
+/* Button hover effects */
+.back-button:hover {
+  background-color: #5a6268; /* Darker gray */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.next-button:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Disabled button styling */
+button:disabled {
+  background-color: #ccc; /* Light gray background */
+  cursor: not-allowed; /* Change cursor to indicate disabled */
+}
+select {
+  background-color: white; /* Đảm bảo nền là màu trắng */
+  color: #333; /* Màu chữ là đen */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}

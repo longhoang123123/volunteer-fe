@@ -1,0 +1,51 @@
+.slider-header {
+  background-color: #007bff; /* Nền màu xanh */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và slider */
+}
+
+.slider-header h1 {
+  margin: 0;
+  font-size: 2rem; /* Tăng kích thước font chữ nếu cần */
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Đảm bảo nội dung bên trong không tràn ra ngoài */
+}
+
+.slider-image {
+  width: 100%;
+  max-width: 800px; /* Giới hạn chiều rộng tối đa của ảnh */
+  height: 500px;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem; /* Kích thước lớn hơn để dễ nhìn thấy */
+  color: #ccc; /* Màu trắng để nổi bật trên nền ảnh */
+  cursor: pointer;
+  user-select: none;
+  z-index: 10; /* Đảm bảo mũi tên hiển thị phía trên ảnh */
+}
+
+.left-arrow {
+  left: 20px; /* Đặt mũi tên bên trái */
+}
+
+.right-arrow {
+  right: 20px; /* Đặt mũi tên bên phải */
+}
+
+.slider-arrow:hover {
+  color: #0e0d0d; /* Hiệu ứng hover để mũi tên sáng hơn khi di chuột */
+}

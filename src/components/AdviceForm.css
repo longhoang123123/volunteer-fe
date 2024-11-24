@@ -1,0 +1,74 @@
+.advice-form {
+    background-color: #007bff; /* Nền màu sáng */
+    padding: 20px;
+    margin: 20px; /* Cách lề */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+
+.advice-form h2 {
+    text-align: center; /* Căn giữa tiêu đề chính */
+    margin-bottom: 20px;
+    color: white; 
+}
+
+.advice-container {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần nằm ngang */
+    justify-content: space-between; /* Căn giữa các phần tử */
+}
+
+.advice-section {
+    flex: 1; /* Mỗi phần chiếm đều 1 phần không gian */
+    margin: 0 10px; /* Khoảng cách giữa các phần */
+    padding: 15px; /* Khoảng cách bên trong phần */
+    border: 2px solid #007bff; /* Viền màu xanh dương */
+    border-radius: 8px; /* Bo tròn góc cho viền */
+    background-color: #ffffff; /* Nền màu trắng cho từng phần */
+}
+
+.advice-section h3 {
+    font-weight: bold; /* Đậm cho tiêu đề phần */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề phần */
+}
+
+.advice-section ul {
+    list-style-type: none; /* Bỏ kiểu danh sách mặc định */
+    padding-left: 0; /* Bỏ khoảng cách bên trái */
+}
+
+/* Thêm các ký hiệu trước mỗi mục trong danh sách */
+.advice-section ul li {
+    position: relative; /* Đặt vị trí tương đối cho phần tử */
+    padding-left: 30px; /* Khoảng cách bên trái để có không gian cho biểu tượng */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+/* Thêm dấu tích cho mục "Nên" */
+.advice-section.right ul li.should::before {
+    content: '✓'; /* Dấu tích */
+    color: #28a745; /* Màu xanh cho dấu tích */
+    font-size: 1.2rem; /* Kích thước cho dấu tích */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    left: 0; /* Đặt sang bên trái */
+    top: 0; /* Đặt ở trên cùng */
+}
+
+/* Thêm dấu x cho mục "Không nên" */
+.advice-section.left ul li.should-not::before {
+    content: '✗'; /* Dấu x */
+    color: #dc3545; /* Màu đỏ cho dấu x */
+    font-size: 1.2rem; /* Kích thước cho dấu x */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    left: 0; /* Đặt sang bên trái */
+    top: 0; /* Đặt ở trên cùng */
+}
+
+/* Thêm dấu chấm than cho mục "Lưu ý" */
+.advice-section.left ul li.note::before {
+    content: '!'; /* Dấu chấm than */
+    color: #ffc107; /* Màu vàng cho dấu chấm than */
+    font-size: 1.2rem; /* Kích thước cho dấu chấm than */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    left: 0; /* Đặt sang bên trái */
+    top: 0; /* Đặt ở trên cùng */
+}

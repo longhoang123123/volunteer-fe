@@ -1,0 +1,28 @@
+.certificate-container {
+    padding: 20px; /* Thêm khoảng cách bên trong */
+    text-align: center; /* Căn giữa nội dung */
+    background-image: url('../images/hm-1.jpeg'); 
+    background-size: cover; /* Để ảnh phủ đầy phần tử */
+    background-position: center; /* Căn giữa ảnh */
+    color: rgb(1, 0, 0); 
+    border-radius: 10px; 
+    height: 1200px;
+}
+
+.add-certificate-button {
+    padding: 10px 20px; /* Padding cho nút */
+    font-size: 16px; /* Kích thước font cho nút */
+    margin-top: 20px; /* Khoảng cách phía trên nút */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền nút có độ trong suốt */
+    color: black; /* Màu chữ cho nút */
+    border: none; /* Bỏ viền cho nút */
+    border-radius: 5px; /* Bo tròn góc cho nút */
+    cursor: pointer; /* Đổi con trỏ khi di chuột qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu cho nút */
+    width: 170px; /* Đặt chiều rộng của nút (có thể thay đổi theo ý muốn) */
+    text-align: center; /* Căn giữa chữ trong nút */
+}
+
+.add-certificate-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Đổi màu khi hover */
+}

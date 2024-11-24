@@ -1,0 +1,40 @@
+/* src/components/Question.css */
+.question-container {
+    border: 1px solid #ccc; /* Thêm viền màu xám */
+    border-radius: 10px; /* Bo góc */
+    padding: 10px 20px;
+    margin: 10px 0; /* Khoảng cách giữa các câu hỏi */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+  }
+  
+  .question-container:hover {
+    border-color: #007bff; /* Thay đổi màu viền khi hover */
+  }
+  
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .question-header:hover {
+    color: #007bff; /* Thay đổi màu chữ khi hover */
+  }
+  
+  .answer {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+.answer ul {
+    padding-left: 20px; /* Thụt lề để danh sách rõ ràng hơn */
+    list-style-type: disc; /* Dùng dấu chấm cho danh sách */
+  }
+  
+  .answer li {
+    margin-bottom: 10px; /* Thêm khoảng cách giữa các mục trong danh sách */
+  }
+    
