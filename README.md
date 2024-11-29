@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Hệ thống quản lý sự kiện hiến máu cho hội chữ thập đỏ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Mô Tả
 
-## Available Scripts
+**Hệ Thống Quản Lý Sự Kiện Hiến Máu** là một ứng dụng web hỗ trợ Hội Chữ thập đỏ trong việc quản lý và tổ chức các sự kiện hiến máu. Hệ thống cung cấp các chức năng như quản lý người hiến máu, thông tin sự kiện. Mục tiêu là tăng cường hiệu quả trong việc kêu gọi và quản lý các hoạt động hiến máu.
 
-In the project directory, you can run:
+## Chức Năng
 
-### `npm start`
+- **Đăng Nhập**: Người dùng có thể đăng nhập vào tài khoản của mình.
+- **Đăng Ký**: Người dùng mới có thể đăng ký tài khoản.
+- **Xác Minh Email**: Chức năng xác minh email để xác thực tài khoản.
+- **Đăng Xuất**: Người dùng có thể đăng xuất khỏi tài khoản của mình.
+- **Quên Mật Khẩu**: Chức năng khôi phục mật khẩu cho những người dùng quên mật khẩu.
+- **Tìm Kiếm và Đăng Ký Sự Kiện**: Người dùng có thể tìm kiếm các sự kiện hiến máu và đăng ký tham gia.
+- **Quản Lý Sự Kiện**: Quản trị viên có thể tạo mới, cập nhật và hủy các sự kiện hiến máu.
+- **Thay Đổi Mật Khẩu**: Người dùng có thể thay đổi mật khẩu của mình.
+- **Quản Lý Người Dùng**: Quản trị viên có thể quản lý tài khoản người dùng
+- **Lịch Sử Hiến Máu**: Người dùng có thể xem lại lịch sử các lần hiến máu của mình.
+- **Quản Lý Địa Điểm Hiến Máu**: Quản trị viên có thể quản lý danh sách các địa điểm hiến máu và thông tin chi tiết.
+- **Quản Lý người nhận máu**: Quản trị viên có thể quản lý những người xin nhận máu.
+- **Quản Lý kho máu**: Quản trị viên có thể quản lý máu trong kho.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Công Nghệ
 
-### `npm test`
+- **Thư Viện ReactJS**: Phát triển phía frontend.
+- **Thư Viện React-router-dom**: Định tuyến cho ứng dụng React.
+- **Thư Viện React-hook-form**: Xử lý biểu mẫu trong React.
+- **Restful API (axios)**: API backend cho giao tiếp dữ liệu.
+- **V.v.**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Cài Đặt
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Để cài đặt dự án, bạn có thể tuân theo các bước sau:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone Repository**: Sao chép repository từ GitHub về máy tính của bạn bằng cách chạy lệnh sau trong terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/longhoang123123/volunteer-fe.git
+   ```
 
-### `npm run eject`
+2. **Cài Đặt Dependencies**: Di chuyển vào thư mục dự án và cài đặt các dependencies bằng npm hoặc yarn:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   cd Blood-donation
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   hoặc
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd Blood-donation
+   yarn install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Khởi Chạy Ứng Dụng**: Sau khi cài đặt xong, bạn có thể khởi chạy ứng dụng bằng lệnh::
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   hoặc
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   yarn start
+   ```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Ứng dụng sẽ khởi chạy và có thể truy cập từ trình duyệt bằng địa chỉ: http://localhost:3000
