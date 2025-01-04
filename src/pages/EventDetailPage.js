@@ -9,10 +9,12 @@ const EventDetailPage = () => {
   const [event, setEvent] = useState(null);
   const [userId, setUserId] = useState(null);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getEvent = async () => {
       try {
+        setLoading(true);
         const accessToken = localStorage.getItem("access_token");
         const decodedToken = jwtDecode(accessToken);
         const res = await axios.get(
@@ -25,7 +27,10 @@ const EventDetailPage = () => {
         );
         setEvent(res.data);
         setUserId(decodedToken.user_id);
-      } catch {}
+      } catch {
+      } finally {
+        setLoading(false);
+      }
     };
 
     getEvent();
@@ -37,6 +42,7 @@ const EventDetailPage = () => {
 
   const handleRegister = async () => {
     try {
+      setLoading(true);
       const accessToken = localStorage.getItem("access_token");
       const decodedToken = jwtDecode(accessToken);
       const res = await axios.post(
@@ -53,7 +59,10 @@ const EventDetailPage = () => {
       );
       setEvent(res.data);
       alert("Bạn đã đăng ký thành công!");
-    } catch {}
+    } catch {
+    } finally {
+      setLoading(false);
+    }
 
     navigate("/appointment");
   };
@@ -68,12 +77,7 @@ const EventDetailPage = () => {
         <strong>Địa điểm:</strong> {event?.location}
       </p>
       <p>
-        <strong>Trạng thái:</strong>{" "}
-        {event?.status === "upcoming"
-          ? "Chuẩn bị diễn ra"
-          : event?.status === "ongoing"
-          ? "Đang diễn ra"
-          : "Đã kết thúc"}
+        <strong>Trạng thái:</strong> {event?.status}
       </p>
       <p>
         <strong>Số người tham gia:</strong>{" "}
@@ -97,10 +101,14 @@ const EventDetailPage = () => {
         style={
           event?.registrations.findIndex(
             (registrationItem) => registrationItem.user.id === userId
-          ) !== -1
+          ) !== -1 &&
+          event?.registrations.find(
+            (registrationItem) => registrationItem.user.id === userId
+          )?.status === "registered"
             ? { display: "none" }
             : {}
         }
+        disabled={loading}
       >
         {event.registered >= event.needed ? "Hết chỗ" : "Đăng ký ngay"}
       </button>

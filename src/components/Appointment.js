@@ -3,6 +3,7 @@ import "./Appointment.css";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import { convertDateTimeFormat } from "../utils";
 
 const Appointment = () => {
   const [events, setEvents] = useState([]);
@@ -83,6 +84,7 @@ const Appointment = () => {
               <th>Trạng thái sự kiện</th>
               <th>Số người đăng ký</th>
               <th>Trạng thái đăng ký</th>
+              <th>Ngày đăng ký</th>
               <th>Hành động</th>
             </tr>
           </thead>
@@ -95,20 +97,15 @@ const Appointment = () => {
                 </td>
                 <td>{event.location}</td>
                 <td
-                  style={{
-                    color:
-                      event.status === "upcoming"
-                        ? "blue"
-                        : event.status === "ongoing"
-                        ? "green"
-                        : "red",
-                  }}
+                  style={
+                    event.status === "Chuẩn bị diễn ra"
+                      ? { color: "blue" }
+                      : event.status === "Đang diễn ra"
+                      ? { color: "green" }
+                      : { color: "red" }
+                  }
                 >
-                  {event.status === "upcoming"
-                    ? "Chuẩn bị diễn ra"
-                    : event.status === "ongoing"
-                    ? "Đang diễn ra"
-                    : "Đã kết thúc"}
+                  {event.status}
                 </td>
                 <td>
                   {
@@ -131,22 +128,33 @@ const Appointment = () => {
                     : "Đã hoàn thành"}
                 </td>
                 <td>
-                  <button
-                    className="cancel-button"
-                    onClick={() =>
-                      handleCancel(
-                        event.registrations.find(
-                          (registrationItem) =>
-                            registrationItem.user.id === userId
-                        )?.id
-                      )
-                    }
-                    style={
-                      event.status === "completed" ? { display: "none" } : {}
-                    }
-                  >
-                    Hủy
-                  </button>
+                  {convertDateTimeFormat(
+                    event.registrations.find(
+                      (registrationItem) => registrationItem.user.id === userId
+                    )?.registration_date
+                  )}
+                </td>
+                <td>
+                  {event.registrations.find(
+                    (registrationItem) => registrationItem.user.id === userId
+                  )?.status === "registered" && (
+                    <button
+                      className="cancel-button"
+                      onClick={() =>
+                        handleCancel(
+                          event.registrations.find(
+                            (registrationItem) =>
+                              registrationItem.user.id === userId
+                          )?.id
+                        )
+                      }
+                      style={
+                        event.status === "completed" ? { display: "none" } : {}
+                      }
+                    >
+                      Hủy
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}

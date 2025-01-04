@@ -93,19 +93,14 @@ const EventsPage = () => {
               <p>Địa điểm: {event.location}</p>
               <p
                 style={
-                  event.status === "upcoming"
+                  event.status === "Chuẩn bị diễn ra"
                     ? { color: "blue" }
-                    : event.status === "ongoing"
+                    : event.status === "Đang diễn ra"
                     ? { color: "green" }
                     : { color: "red" }
                 }
               >
-                Trạng thái:{" "}
-                {event.status === "upcoming"
-                  ? "Chuẩn bị diễn ra"
-                  : event.status === "ongoing"
-                  ? "Đang diễn ra"
-                  : "Đã kết thúc"}
+                Trạng thái: {event.status}
               </p>
               <p>
                 Số người đăng ký:{" "}
